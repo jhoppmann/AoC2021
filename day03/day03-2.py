@@ -19,7 +19,7 @@ def main():
 
 
 def order_by_occurence(current_list: list, position: int) -> (int, int):
-    int_list = [int(x[position:position+1]) for x in current_list]
+    int_list = [int(x[position]) for x in current_list]
     ones = int_list.count(1)
     if ones >= len(current_list) / 2:
         return 1, 0
