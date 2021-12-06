@@ -6,7 +6,6 @@ def main() -> None:
     fish = {}
     for i in range(9):
         fish[i] = fish_ages.count(i)
-    print(fish)
 
     for i in range(256):
         new_ages = {}
