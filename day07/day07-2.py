@@ -10,7 +10,9 @@ def main() -> None:
         for crab in crabs:
             fuel += gauss_formula(abs(crab - i))
 
-        fuel_usage = min(fuel, fuel_usage)
+        if fuel > fuel_usage:
+            break
+        fuel_usage = fuel
 
     print(fuel_usage)
 
