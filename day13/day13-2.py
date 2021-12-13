@@ -43,13 +43,11 @@ def make_visible(dots: list) -> None:
     max_x = 0
     max_y = 0
     for dot in dots:
-        max_x = max(max_x, dot[0] + 1)
-        max_y = max(max_y, dot[1] + 1)
+        max_x = max(max_x, dot[0])
+        max_y = max(max_y, dot[1])
     lines = []
-    for y in range(max_y):
-        line = []
-        for x in range(max_x):
-            line.append(' ')
+    for _ in range(max_y + 1):
+        line = (max_x + 1) * [' ']
         lines.append(line)
 
     for dot in dots:
@@ -58,7 +56,6 @@ def make_visible(dots: list) -> None:
 
     for line in lines:
         print(' '.join(line))
-
 
 
 if __name__ == '__main__':
