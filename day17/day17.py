@@ -9,8 +9,6 @@ def main() -> None:
     ints = [int(x) for x in ints]
     x_range = (ints[0], ints[1])
     y_range = (ints[3], ints[2])  # larger number first
-    width = abs(x_range[1] - x_range[0])
-    height = abs(y_range[1] - y_range[0])
 
     position = (0, 0)
     highest = 0
